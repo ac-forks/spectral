@@ -319,7 +319,6 @@
       "type": "validation",
       "given": "$..*",
       "then": {
-        "field": "$.[?(@.enum && @.type)]",
         "function": "typedEnum"
       }
     },
