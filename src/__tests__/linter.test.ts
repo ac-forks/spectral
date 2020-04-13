@@ -697,6 +697,8 @@ responses:: !!foo
     spectral.setRules({
       'operation-tag-defined': {
         ...spectral.rules['operation-tag-defined'],
+        message: spectral.rules['operation-tag-defined'].message ?? '',
+        description: spectral.rules['operation-tag-defined'].description ?? '',
         severity: 'off',
       },
     });
@@ -1023,6 +1025,7 @@ responses:: !!foo
     spectral.setRules({
       'oas3-schema': {
         ...spectral.rules['oas3-schema'],
+        description: spectral.rules['oas3-schema'].description ?? '',
         message: 'Schema error at {{path}}',
       },
     });
